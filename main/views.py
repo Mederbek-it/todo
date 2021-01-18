@@ -29,3 +29,8 @@ def books_store(request):
     books_store = books_store(text=text)
     books_store.save()
     return redirect(books)
+
+def delete_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(test)
