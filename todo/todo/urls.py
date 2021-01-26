@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import homepage, test
+from main.views import *
 from product.views import go
 
 urlpatterns = [
@@ -23,4 +23,5 @@ urlpatterns = [
     path("", homepage, name="home"),
     path("test/", test, name="test"),
     path('go/', go, name="go"),
+    path("books-store/", books_store, name="books-store"),
 ]

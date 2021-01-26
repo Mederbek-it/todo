@@ -24,11 +24,7 @@ def add_todo(request):
     return redirect(test)
 
 def books_store(request):
-    form = request.POST
-    text = form["books_store"]
-    books_store = books_store(text=text)
-    books_store.save()
-    return redirect(books)
+    return render(request, "books.html")
 
 def delete_todo(request, id):
     todo = ToDo.objects.get(id=id)
